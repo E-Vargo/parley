@@ -11,6 +11,7 @@ class SignUp extends Component {
             <form>
                 <input type="text"/>
                 <input type="text"/>
+                <input type="text"/>
                 <input type="submit"/>
             </form>
         
