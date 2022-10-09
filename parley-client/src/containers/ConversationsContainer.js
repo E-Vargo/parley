@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Conversations from '../components/conversations/conversations'
 
 
 class ConversationsContainer extends Component {
@@ -7,7 +8,8 @@ class ConversationsContainer extends Component {
     render() {
         return (
             <div>
-                Hello here we go!!!
+                where conversation logic will be housed
+                <Conversations />
             </div>
         )
     }
