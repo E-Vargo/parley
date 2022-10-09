@@ -1,4 +1,11 @@
-export default function rootReducer(state, action) {
+import { combineReducers } from "redux"
+import authReducer from "./authReducer"
+import conversationsReducer from "./conversationsReducer"
 
-    return state
-}
+
+ const rootReducer = combineReducers({
+    conversations: conversationsReducer,
+    auth: authReducer
+})
+
+export default rootReducer

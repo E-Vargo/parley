@@ -1,6 +1,6 @@
 const authReducer = (state = {users: [], loading: false}, action) => {
     switch(action.type){
-     default:
+    default:
             return state;
     }
 }
