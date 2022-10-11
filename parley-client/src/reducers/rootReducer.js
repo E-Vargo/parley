@@ -1,11 +1,9 @@
 import { combineReducers } from "redux"
-import {authReducer} from "./authReducer"
 import {conversationsReducer} from "./conversationsReducer"
 
 
  const rootReducer = combineReducers({
-    conversations: conversationsReducer,
-    auth: authReducer
+    conversations: conversationsReducer
 })
 
 export default rootReducer

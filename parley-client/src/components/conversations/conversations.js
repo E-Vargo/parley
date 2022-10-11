@@ -8,7 +8,7 @@ class Conversations extends Component {
         return (
             <div>
             <Conversation />
-            <ConversationInput />
+            
             </div>
         )
     }

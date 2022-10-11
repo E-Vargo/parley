@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import  {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import {addConvo} from '../../actions/conversations';
+
 
 
 class ConversationInput extends Component {
@@ -15,7 +17,8 @@ class ConversationInput extends Component {
         }
 
         handleSubmit = e => {
-          
+          e.preventDefault()
+          this.props.addConvo(this.state)
         }
     
     
@@ -29,7 +32,7 @@ class ConversationInput extends Component {
                 <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/>
                 <br/>
 
-                <input type="submit"/>
+                <input type="submit" value="Create Conversation"/>
             </form>
         
             </div>
@@ -37,4 +40,4 @@ class ConversationInput extends Component {
     }
 }
 
-export default ConversationInput;
+export default connect(null, {addConvo})(ConversationInput);

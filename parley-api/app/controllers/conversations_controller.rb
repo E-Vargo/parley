@@ -43,6 +43,6 @@ class ConversationsController < ApplicationController
   
       
       def conversation_params
-        params.require(:idea).permit(:id, :title)
+        params.require(:conversation).permit(:id, :title)
       end
 end
