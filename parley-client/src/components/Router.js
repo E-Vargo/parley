@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from '../components/Home';
 import ConversationsContainer from '../containers/ConversationsContainer';
+import {Conversation} from './conversations/conversation';
 
 
 const Router = () => {
@@ -15,7 +16,7 @@ const Router = () => {
             <Routes>
                 <Route exact path="/" element={< Home />}/>
                 <Route path="/conversations" element={<ConversationsContainer/>} />
-                
+                <Route path="/conversations/:conversationId" element={<Conversation />}/>
             </Routes>
         </BrowserRouter>
     )

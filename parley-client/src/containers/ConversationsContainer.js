@@ -17,6 +17,7 @@ class ConversationsContainer extends Component {
                 where conversation logic will be housed
                 <Conversations conversations={this.props.conversations}/>
                 <ConversationInput />
+                
             </div>
         )
     }
