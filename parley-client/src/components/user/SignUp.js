@@ -11,10 +11,10 @@ class SignUp extends Component {
         }
     
         handleChange = e => {
-            const {name, value} = e.target
+            
 
             this.setState({
-                [name]: value
+                [e.target.name]: e.target.value
             })
         }
 
