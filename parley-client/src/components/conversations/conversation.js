@@ -12,7 +12,7 @@ export const Conversation = (props) => {
 
     return (
         <div>
-            <p>{props.title}</p>
+           {props.title}
         </div>)
         
         

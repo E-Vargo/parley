@@ -10,7 +10,7 @@ class Conversations extends Component {
             <div>            
                 {this.props.conversations.conversations.map(convo => 
                     <Link key={convo.id} to={`/conversations/${convo.id}`}>
-                        <Conversation key={convo.id} title={convo.title}/> 
+                        <Conversation key={convo.id} title={convo.title} state={this.props.conversations.conversations}/> 
                     </Link>
                 )}
             </div>
