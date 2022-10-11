@@ -8,3 +8,7 @@
 
 u = User.create(username: "name", password_digest: "password", avatar: "avatar")
 w = User.create(username: "name1", password_digest: "password1", avatar: "avatar1")
+x = Conversation.create(title:'one')
+y = Conversation.create(title:'two')
+a = Comment.create(content:'comment on convo one', conversation_id:1)
+a = Comment.create(content:'comment on convo two', conversation_id:2)

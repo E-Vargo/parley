@@ -7,12 +7,8 @@ export const conversationsReducer = (state = [], action) => {
                 loading: true
             }
 
-        case "ADD_CONVERSATION":
-            return {
-                ...state,
-                conversation: action.conversation,
-                loading: false
-            }
+        case "FETCH_CONVERSATION":
+            return action.payload
 
         default:
             return state;
