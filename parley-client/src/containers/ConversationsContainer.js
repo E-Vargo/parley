@@ -15,11 +15,17 @@ class ConversationsContainer extends Component {
         return (
             <div>
                 where conversation logic will be housed
-                <Conversations />
+                <Conversations conversations={this.props.conversations}/>
                 <ConversationInput />
             </div>
         )
     }
 }
 
-export default connect(null, {fetchConversations})(ConversationsContainer)
+const mapStateToProps = (state) => {
+    return {
+        conversations: state.conversations
+    }
+}
+
+export default connect(mapStateToProps, {fetchConversations})(ConversationsContainer)

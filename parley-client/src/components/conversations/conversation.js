@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 class Conversation extends Component {
     render(){
         return (
-            <p>index of conversations</p>
+            <p>{this.props.title}</p>
         )
     }
 }

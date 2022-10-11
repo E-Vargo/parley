@@ -8,12 +8,14 @@ import {
 import Home from '../components/Home';
 import ConversationsContainer from '../containers/ConversationsContainer';
 
+
 const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route exact path="/" element={< Home />}/>
                 <Route path="/conversations" element={<ConversationsContainer/>} />
+                
             </Routes>
         </BrowserRouter>
     )
