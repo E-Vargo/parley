@@ -1,9 +1,10 @@
 export const fetchConversations = () => {
     return (dispatch) => {
-        
+        dispatch({type: "LOADING_CONVERSATIONS"})
         fetch('http://localhost:3001/conversations')
-        .then(resp => resp.json())
-        .then(conversations => console.log(conversations))
+        .then(response => response.json())
+        .then((responseJSON) => {dispatch({type: "ADD_CONVERSATIONS", conversations: responseJSON})})
+        
     }
 }
 
@@ -15,6 +16,6 @@ export const addConvo = convo => {
             headers: {'Content-Type': 'application/json'}
         })
         .then(resp => resp.json())
-        .then(conversation => dispatch({type: 'ADD_CONVERSATION', payload: conversation}))
+        .then(conversation => dispatch({type: 'ADD_CONVERSATION', conversation: conversation}))
     }
 }
