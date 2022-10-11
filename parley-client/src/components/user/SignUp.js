@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-
-
+import  {connect} from 'react-redux';
+import {addUser} from '../../actions/auth'
 
 class SignUp extends Component {
     
         state = {
             username: '',
-            pasword: '',
+            password: '',
             avatar: ''
         }
     
@@ -20,6 +20,9 @@ class SignUp extends Component {
 
         handleSubmit = e => {
             e.preventDefault()
+            this.setState({
+                user:{...this.state}
+            })
             this.props.addUser(this.state)
         }
     
@@ -32,15 +35,15 @@ class SignUp extends Component {
                 upon submission (if both fields are full) use addUser action to persist user to database
             <form onSubmit={this.handleSubmit}>
                 <label>Username</label>
-                <input type="text" name="username" onChange={this.handleChange}/>
+                <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
                 <br/>
 
                 <label>Password</label>
-                <input type="text" name="password" onChange={this.handleChange}/>
+                <input type="text" name="password" value={this.state.password} onChange={this.handleChange}/>
                 <br/>
 
                 <label>Avatar url</label>
-                <input type="text" name="avatar" onChange={this.handleChange}/>
+                <input type="text" name="avatar" value={this.state.avatar} onChange={this.handleChange}/>
                 <br/>
 
 
@@ -52,4 +55,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+export default connect(null, { addUser })(SignUp);

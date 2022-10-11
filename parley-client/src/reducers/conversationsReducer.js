@@ -1,4 +1,4 @@
-const conversationsReducer = (state = {conversations: [], loading: false}, action) => {
+export const conversationsReducer = (state = [], action) => {
     switch(action.type){
         case "LOADING_CONVERSATIONS":
             return {
@@ -10,7 +10,7 @@ const conversationsReducer = (state = {conversations: [], loading: false}, actio
         case "ADD_CONVERSATION":
             return {
                 ...state,
-                user: action.user,
+                conversation: action.conversation,
                 loading: false
             }
 
@@ -19,4 +19,3 @@ const conversationsReducer = (state = {conversations: [], loading: false}, actio
     }
 }
 
-export default conversationsReducer
