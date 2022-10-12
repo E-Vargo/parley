@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { fetchComments } from '../../actions/comments';
 import CommentInput from '../comments/commentInput';
-import {Comment} from '../comments/comment';
-
-
-
 
 class ConversationShow extends Component  {
 
@@ -24,10 +20,7 @@ class ConversationShow extends Component  {
         <div>
             <h1>{conversation.title}</h1>
             <CommentInput conversation_id={parseInt(convoId)}/>
-            {matchedComments.map(comment => <p>{comment.content}</p>)}
-           {console.log(parseInt(convoId))}
-           {console.log(conversation.title)}
-           {console.log(matchedComments)}
+            <ol>{matchedComments.map(comment => <li key={comment.id}>{comment.content}</li>)}</ol>
         </div>)}
 }
 
