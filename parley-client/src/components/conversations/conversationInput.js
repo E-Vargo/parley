@@ -19,6 +19,9 @@ class ConversationInput extends Component {
         handleSubmit = e => {
           e.preventDefault()
           this.props.addConvo(this.state)
+          this.setState({
+            title: ''
+          })
         }
     
     

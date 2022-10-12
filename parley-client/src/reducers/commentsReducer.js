@@ -3,7 +3,6 @@ const initialState = {
     loading: false
 }
 
-
 export const commentsReducer = (state = initialState, action) => {
     switch(action.type){
 
@@ -18,8 +17,8 @@ export const commentsReducer = (state = initialState, action) => {
             return {...state, comments: action.comments, loading: false}
 
 
-        case "ADD_COMMENTS":
-            return {...state, comments: [...state.comments, action.conversation], loading: false}
+        case "ADD_COMMENT":
+            return {...state, comments: [...state.comments, action.comment], loading: false}
 
         default:
             return state;

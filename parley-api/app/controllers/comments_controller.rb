@@ -37,12 +37,12 @@ class CommentsController < ApplicationController
 
   private
    
-    def set_conversation
+    def set_comment
       @comment = Comment.find(params[:id])
     end
 
     
     def comment_params
-      params.require(:idea).permit(:id, :content, :conversation_id)
+      params.require(:comment).permit(:id, :content, :conversation_id)
     end
 end
