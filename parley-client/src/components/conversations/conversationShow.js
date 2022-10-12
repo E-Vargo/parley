@@ -7,11 +7,13 @@ class ConversationShow extends Component  {
     render(){
         const path = window.location.pathname
         const re = /[0-9]+/;
-        const convoId = path.match(re)
+        const convoId = path.match(re)[0]
+        const conversation = this.props.conversations.find(convo => convo.id == convoId)
         
     return (
         <div>
-           {console.log(convoId[0])}
+           {console.log(convoId)}
+           {console.log(conversation.title)}
         </div>)}
 }
 
