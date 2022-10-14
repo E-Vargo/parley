@@ -21,14 +21,15 @@ export const addComment = comment => {
 }
 
 export const deleteComment = comment => {
-    console.log(comment)
     return (dispatch) => {
+        
         fetch(`http://localhost:3001/comments/${comment.id}`, {
             method: "DELETE",
-            headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(comment),
+            headers: { "Content-Type": "application/json",  Accept: "application/json"},
+            body: JSON.stringify(comment)
         })
-        .then((resp) => resp.json())
-        .then(comment => dispatch({type: 'DELETE_COMMENT', comment: comment}))
+        .then(resp => resp.json())
+        .then((responseJSON) => {dispatch({type: "DELETE_COMMENT", comment: responseJSON})})
+        
     }
 }

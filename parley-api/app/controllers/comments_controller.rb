@@ -32,7 +32,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    comment = @comment
     @comment.destroy
+    render json: comment
   end
 
   private
