@@ -19,3 +19,16 @@ export const addComment = comment => {
         .then(comment => dispatch({type: 'ADD_COMMENT', comment: comment}))
     }
 }
+
+export const deleteComment = comment => {
+    console.log(comment)
+    return (dispatch) => {
+        fetch(`http://localhost:3001/comments/${comment.id}`, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(comment),
+        })
+        .then((resp) => resp.json())
+        .then(comment => dispatch({type: 'DELETE_COMMENT', comment: comment}))
+    }
+}
