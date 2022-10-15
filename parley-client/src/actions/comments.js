@@ -42,6 +42,7 @@ export const updateComment = comment => {
             headers: { "Content-Type": "application/json",  Accept: "application/json"},
             body: JSON.stringify(comment)
         })
-        .then(resp => console.log(resp))
+        .then(resp => resp.json())
+        .then((responseJSON) => {dispatch({type: "UPDATE_COMMENT", comment: responseJSON})})
     }
 }
