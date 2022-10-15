@@ -10,6 +10,7 @@ export const fetchComments = () => {
 
 export const addComment = comment => {
     return (dispatch) => {
+        dispatch({type: "LOADING_COMMENTS"})
         fetch('http://localhost:3001/comments', {
             method: 'POST',
             body: JSON.stringify(comment),
@@ -22,7 +23,7 @@ export const addComment = comment => {
 
 export const deleteComment = comment => {
     return (dispatch) => {
-        
+        dispatch({type: "LOADING_COMMENTS"})
         fetch(`http://localhost:3001/comments/${comment.id}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json",  Accept: "application/json"},
@@ -36,6 +37,7 @@ export const deleteComment = comment => {
 
 export const updateComment = comment => {
     return(dispatch) => { 
+        dispatch({type: "LOADING_COMMENTS"})
         console.log(comment)
         fetch(`http://localhost:3001/comments/${comment.id}`, {
             method: "PATCH",

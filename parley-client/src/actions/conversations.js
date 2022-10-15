@@ -10,6 +10,7 @@ export const fetchConversations = () => {
 
 export const addConvo = convo => {
     return (dispatch) => {
+        dispatch({type: "LOADING_CONVERSATIONS"})
         fetch('http://localhost:3001/conversations', {
             method: 'POST',
             body: JSON.stringify(convo),
