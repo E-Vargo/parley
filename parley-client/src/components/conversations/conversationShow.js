@@ -22,7 +22,7 @@ class ConversationShow extends Component  {
         <div>
             <h1>{conversation.title}</h1>
             <CommentInput conversation_id={parseInt(convoId)}/>
-            <ol>{ matchedComments.map((comment) => <li key={comment.id}><Comment  commentData={comment} delete={this.props.deleteComment}/></li>)}</ol>
+            <ol>{ matchedComments.map((comment) => <li key={comment.id}><Comment  conversation_id={parseInt(convoId)} commentData={comment} delete={this.props.deleteComment}/></li>)}</ol>
         </div>)}
 }
 

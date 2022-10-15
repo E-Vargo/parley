@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import CommentUpdateInput from './commentUpdateInput';
 
 export const Comment = (props) => {
     
@@ -12,7 +13,7 @@ export const Comment = (props) => {
         </div>)  } else if (loading === true) {
             return (
             <div>
-                    1999
+                    <CommentUpdateInput conversation_id={props.conversation_id} commentData={props.commentData}/>
             </div>)
         }
 }

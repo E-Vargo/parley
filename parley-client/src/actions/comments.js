@@ -33,3 +33,15 @@ export const deleteComment = comment => {
         
     }
 }
+
+export const updateComment = comment => {
+    return(dispatch) => { 
+        console.log(comment)
+        fetch(`http://localhost:3001/comments/${comment.id}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json",  Accept: "application/json"},
+            body: JSON.stringify(comment)
+        })
+        .then(resp => console.log(resp))
+    }
+}
