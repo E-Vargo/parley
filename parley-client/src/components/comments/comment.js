@@ -13,7 +13,7 @@ export const Comment = (props) => {
         </div>)  } else if (loading === true) {
             return (
             <div>
-                    <CommentUpdateInput conversation_id={props.conversation_id} commentData={props.commentData}/>
+                    <CommentUpdateInput setLoading={setLoading} conversation_id={props.conversation_id} commentData={props.commentData}/>
             </div>)
         }
 }

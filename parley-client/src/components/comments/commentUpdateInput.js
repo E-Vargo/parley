@@ -8,7 +8,7 @@ class CommentUpdateInput extends Component {
     
         state = {
             id: this.props.commentData.id,
-            content: '',
+            content: this.props.commentData.content,
             conversation_id: this.props.conversation_id
         }
     
@@ -20,6 +20,7 @@ class CommentUpdateInput extends Component {
 
         handleSubmit = e => {
           e.preventDefault()
+          this.props.setLoading(false)
           this.props.updateComment(this.state)
           this.setState({
             content: ''
@@ -34,10 +35,10 @@ class CommentUpdateInput extends Component {
         
             <form onSubmit={this.handleSubmit}>
                 <label>Update Comment:</label>
-                <input type="text" name="content" value={this.state.content} placeholder={this.props.commentData.content} onChange={this.handleChange}/>
-                <br/>
+                <input type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
+                
 
-                <input type="submit" value="Add"/>
+                <input type="submit" value="Update"/>
             </form>
         
             </div>
