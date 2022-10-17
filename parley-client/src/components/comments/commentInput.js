@@ -34,9 +34,9 @@ class CommentInput extends Component {
             <form onSubmit={this.handleSubmit}>
                 <label>Add Comment:</label>
                 <input type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
-                <br/>
+                
 
-                <input type="submit" value="Add"/>
+                <input class="btn btn-outline-success" type="submit" value="Add"/>
             </form>
         
             </div>
