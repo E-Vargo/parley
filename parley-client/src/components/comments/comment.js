@@ -9,7 +9,7 @@ export const Comment = (props) => {
     return (
         
         <div>
-           {props.commentData.content}<button onClick={() => setLoading(true)}>Edit</button><button onClick={() => props.delete(props.commentData)}>X</button>
+           {props.commentData.content}<button class="btn btn-outline-info" onClick={() => setLoading(true)}>Edit</button><button  class="btn btn-outline-danger" onClick={() => props.delete(props.commentData)}>X</button>
         </div>)  } else if (loading === true) {
             return (
             <div>

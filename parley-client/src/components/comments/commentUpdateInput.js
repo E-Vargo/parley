@@ -38,7 +38,7 @@ class CommentUpdateInput extends Component {
                 <input type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
                 
 
-                <input type="submit" value="Update"/>
+                <input class="btn btn-outline-info" type="submit" value="Update"/>
             </form>
         
             </div>

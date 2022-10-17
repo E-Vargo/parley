@@ -21,8 +21,8 @@ class ConversationShow extends Component  {
     return (
         <div>
             <h1>{conversation.title}</h1>
-            <CommentInput conversation_id={parseInt(convoId)}/>
             <ol>{ matchedComments.map((comment) => <li key={comment.id}><Comment  conversation_id={parseInt(convoId)} commentData={comment} delete={this.props.deleteComment}/></li>)}</ol>
+            <CommentInput conversation_id={parseInt(convoId)}/>
         </div>)}
 }
 
