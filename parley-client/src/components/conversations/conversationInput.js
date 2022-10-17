@@ -31,10 +31,13 @@ class ConversationInput extends Component {
             <div class="text-center">
         
             <form onSubmit={this.handleSubmit}>
-                <div class="mb-3">
-                <label>Title:</label>
+                ------------------------------------------------------------------------------------------
+                <br/>
+                <br/>
+                <br/>
+                <label>Add Conversation:</label>
                 <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/>
-                </div>
+                
                 <input class="btn btn-outline-success" type="submit" value="Create Conversation"/>
                 
             </form>
