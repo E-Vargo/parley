@@ -7,7 +7,7 @@ This is a simple crud application created as a  JS react/redux project for flati
 Clone this repo and configure front and backends. I recommend opening two terminals.
 
 Backend (cd into parley-api):
-
+```
 bundle install
 rails db:migrate
 rails db:seed
