@@ -9,7 +9,6 @@ class UserContainer extends Component {
     render() {
         return (
             <div>
-                where user logic will be housed
                 <SignUp />
             </div>
         )

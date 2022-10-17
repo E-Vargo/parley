@@ -28,14 +28,15 @@ class ConversationInput extends Component {
     
     render(){
         return (
-            <div>
+            <div class="flex">
         
             <form onSubmit={this.handleSubmit}>
+                <div class="mb-3">
                 <label>Title:</label>
                 <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/>
-                <br/>
-
-                <input type="submit" value="Create Conversation"/>
+                </div>
+                <input class="btn btn-outline-success" type="submit" value="Create Conversation"/>
+                
             </form>
         
             </div>

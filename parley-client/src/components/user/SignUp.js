@@ -29,8 +29,6 @@ class SignUp extends Component {
     render(){
         return (
             <div>
-                here will be sign up formu
-                upon submission (if both fields are full) use addUser action to persist user to database
             <form onSubmit={this.handleSubmit}>
                 <label>Username</label>
                 <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>

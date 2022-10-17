@@ -14,7 +14,6 @@ class ConversationsContainer extends Component {
     render() {
         return (
             <div>
-                where conversation logic will be housed
                 <Conversations conversations={this.props.conversations}/>
                 <ConversationInput />
                 
