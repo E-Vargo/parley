@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const nav = () => {
+export const Nav = () => {
     return(
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" >Parley</a>
         </div>

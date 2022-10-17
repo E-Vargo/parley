@@ -19,7 +19,7 @@ class ConversationShow extends Component  {
         const matchedComments = this.props.comments.filter(comment => comment.conversation_id == convoId)
         
     return (
-        <div>
+        <div class="text-center">
             <h1>{conversation.title}</h1>
             <ol>{ matchedComments.map((comment) => <li key={comment.id}><Comment  conversation_id={parseInt(convoId)} commentData={comment} delete={this.props.deleteComment}/></li>)}</ol>
             <CommentInput conversation_id={parseInt(convoId)}/>

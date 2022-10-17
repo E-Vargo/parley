@@ -28,7 +28,7 @@ class ConversationInput extends Component {
     
     render(){
         return (
-            <div class="flex">
+            <div class="text-center">
         
             <form onSubmit={this.handleSubmit}>
                 <div class="mb-3">
