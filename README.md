@@ -15,7 +15,7 @@ rails s -p 3001
 ```
 
 Frontend (cd into parley-client):
-
+```
 npm install
 npm start
 ```
